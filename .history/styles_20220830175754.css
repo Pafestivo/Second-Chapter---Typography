@@ -1,0 +1,98 @@
+/* Usually better to use this on the top to make sure padding and margins will not add up to the boxes sizes. */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Setting the font size for the whole document so we can use later on the 'rem' to define sizes. */
+  html {
+    font-size: 16px;
+  }
+  
+  /* With the comma, you can define a fallback font in case the browser can't load the main font. */
+  body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .label {
+    border: 2px solid black;
+    width: 270px;
+    margin: 20px auto;
+    padding: 0 7px;
+  }
+  
+  /* You can target elements inside other elements for specific changes without using classes. */
+  header h1 {
+    text-align: center;
+    margin: -4px 0;
+    letter-spacing: 0.15px
+  }
+  
+  p {
+    margin: 0;
+  }
+
+  /* Float is used to make text stick to the right or left of a container */
+  .right {
+    float: right;
+  }
+  
+  /* Using float will make all type of problems and weird behaviours, so it's best to use the 'clear' property to fix it asap */
+  .divider {
+    border-bottom: 1px solid #888989;
+    margin: 2px 0;
+    clear: right;
+  }
+  
+  /* Font weight will increase the boldness */
+  .bold {
+    font-weight: 800;
+  }
+  
+  /* lg and md are used in combination with divider to choose it's thickness  */
+  .lg {
+    height: 10px;
+  }
+  
+  .md {
+    height: 5px;
+  }
+
+  .lg, .md {
+    background-color: black;
+    border: 0;
+  }
+  
+  /* Using the rem is like using percentage of the original font size, for example 0.85rem is 85% of the font size. */
+  .sm-text {
+    font-size: 0.85rem;
+  }
+  
+  /* Targeting all h1 inside a div with the class of 'calories-info'. */
+  .calories-info h1 {
+    margin: -5px -2px;
+    overflow: hidden;
+  }
+  
+  .calories-info span {
+    font-size: 1.2em; /* 120% of font size */
+    margin-top: -7px;
+  }
+  
+  /* em is similar to rem, but rem is relative to the html element font size, while em is relative to the parent font size. */
+  .indent {
+    margin-left: 1em;
+  }
+  
+  .dbl-indent {
+    margin-left: 2em;
+  }
+  
+  /* Using the class:not(something) will apply this role to everything inside a class other than what specified. */
+  .daily-value p:not(.no-divider) {
+    border-bottom: 1px solid #888989;
+  }
+  
+  .note {
+    font-size: 0.6rem;
+    margin: 5px 0;
+  }
